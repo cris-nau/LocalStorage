@@ -1,7 +1,8 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" color="light"> 
+  <ion-toolbar color="light">
     <ion-title>
-      Testing - Add LocalStorage
+      Add LocalStorage
+      <ion-img style="width: 30px; margin-left: 180px; margin-top: -20px;" src="https://cdn-icons-png.flaticon.com/512/6203/6203186.png"></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,9 +16,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <ion-label>{{recovertext}}</ion-label>
-    <input type="text" [(ngModel)]="receivetext">
-    <button (click)="print()">Send</button>
-  </div>
+
+  <ion-content color="light">
+    <ion-item>
+      <ion-input placeholder="Agregar Tarea" [(ngModel)]="receivetext"></ion-input>
+      <ion-button slot="end" (click)="print()" color="success" color="warning">Agregar</ion-button>
+    </ion-item>
+    <ion-card color="secondary">
+      <ion-card-content>
+        {{recovertext}}
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
 </ion-content>
